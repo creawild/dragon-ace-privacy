@@ -1,6 +1,6 @@
 name: Deploy privacy policy to GitHub Pages
 
-# Drafts are previewed locally. Run this manually only when the policy is ready.
+# Review policy changes locally, then start a deployment manually.
 on:
   workflow_dispatch:
 
@@ -15,6 +15,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
