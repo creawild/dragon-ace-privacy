@@ -2,6 +2,13 @@
 
 纯静态双语网站，英文入口为 `index.html`，中文入口为 `zh.html`。共享样式与交互位于 `assets/`，无需安装依赖或构建。
 
+正式地址：
+
+- 英文：<https://creawild.github.io/dragonace/privacy/>
+- 中文：<https://creawild.github.io/dragonace/privacy/zh.html>
+
+GitHub 仓库为 `creawild/dragonace`，发布时将页面放入站点的 `privacy/` 子目录。
+
 ## 本地预览
 
 在项目目录执行：
@@ -26,9 +33,9 @@ python3 -m http.server 8000 --bind 127.0.0.1
 2. 将项目提交并推送至 GitHub 默认分支。
 3. 在仓库 **Settings → Pages → Build and deployment → Source** 中选择 **GitHub Actions**。
 4. 在 **Actions → Deploy privacy policy to GitHub Pages → Run workflow** 中手动运行发布。
-5. 以成功的工作流输出的页面 URL 为准。中文页位于同一路径下的 `zh.html`。
+5. 发布成功后打开 <https://creawild.github.io/dragonace/privacy/>。中文页位于同一路径下的 `zh.html`。
 
-发布工作流只打包两个 HTML 页面和 `assets/`，不发布 README、术语表等工程文件。工作流仅允许手动触发，普通推送不会自动发布。
+发布工作流将两个 HTML 页面和 `assets/` 打包至 `_site/privacy/`，不发布 README、术语表等工程文件。工作流仅允许手动触发，普通推送不会自动发布。
 
 配置方式参考 [GitHub Pages 官方工作流说明](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。
 

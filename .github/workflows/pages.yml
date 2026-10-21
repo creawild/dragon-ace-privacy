@@ -20,7 +20,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://creawild.github.io/dragonace/privacy/
     steps:
       - name: Check out source
         uses: actions/checkout@v6
@@ -28,9 +28,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Prepare public files
         run: |
-          mkdir -p _site
-          cp index.html zh.html _site/
-          cp -R assets _site/assets
+          mkdir -p _site/privacy
+          cp index.html zh.html _site/privacy/
+          cp -R assets _site/privacy/assets
           touch _site/.nojekyll
       - name: Upload public files
         uses: actions/upload-pages-artifact@v4
