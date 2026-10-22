@@ -20,7 +20,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://creawild.github.io/dragonace/privacy/
+      url: https://creawild.github.io/dragon-ace-privacy/privacy/
     steps:
       - name: Check out source
         uses: actions/checkout@v6
